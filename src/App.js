@@ -5,12 +5,14 @@ import './App.css';
 // import Profile from './components/Profile';
 // import Counter from './components/Counter';
 // import Resume from './components/Resume';
-import FunctionEvent from './components/FunctionEvent';
+// import FunctionEvent from './components/FunctionEvent';
+import ClassEvent from './components/ClassEvent';
 
 function App() {
   return (
     <div className="App">
-      <FunctionEvent></FunctionEvent>
+      <ClassEvent></ClassEvent>
+
 
       {/* <Hello />
       <Message messagecode='10' messageContent='This is a message from props.'/>
@@ -18,7 +20,8 @@ function App() {
         <h3>This is adding a child html element to the Profile component.</h3>
       </Profile>
       <Counter></Counter>
-      <Resume name='class'></Resume> */}
+      <Resume name='class'></Resume>
+      <FunctionEvent></FunctionEvent> */}
 
     </div>
   );
