@@ -6,9 +6,21 @@ class Counter extends Component{
     this.state = {
       counter: 0,
     };
+    // binding inside structure
+    // this.increment = this.increment.bind(this);
   }
 
-  increment(){
+  // increment(){
+  //   this.setState({
+  //     counter: this.state.counter + 1,
+  //   })
+  // }
+
+
+  // arrow functions have direct access to this keywords
+  // arrow functions are recommended for class based functions
+  increment = () => {
+    console.log(this);
     this.setState({
       counter: this.state.counter + 1,
     })
@@ -25,7 +37,9 @@ class Counter extends Component{
     return (
     <div>
       <h3>Count value is: {this.state.counter}</h3>
-      <button onClick={()=> this.increment()}>Increment</button>
+      {/* then do it like this: */}
+      <button onClick={this.increment}>Increment</button>
+      {/*  */}
       <button onClick={()=> this.decrement()}>Decrement</button>
     </div>
     );
